@@ -121,6 +121,10 @@ var providerBitbucket = Provider{
 
 		userEmails, err := getBitbucketEmails(token)
 
+		if err != nil {
+			return model.UserInfo{}, "", fmt.Errorf("error reading bitbucket user's email: %v", err)
+		}
+
 		return model.UserInfo{
 			Sub:     gu.Username,
 			Picture: fmt.Sprintf(bitbucketAvatarURL, gu.Username),
