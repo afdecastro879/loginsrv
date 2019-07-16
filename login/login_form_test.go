@@ -1,8 +1,8 @@
 package login
 
 import (
+	"github.com/afdecastro/loginsrv/model"
 	. "github.com/stretchr/testify/assert"
-	"github.com/tarent/loginsrv/model"
 	"io/ioutil"
 	"net/http/httptest"
 	"os"

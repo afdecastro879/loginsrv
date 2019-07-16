@@ -3,9 +3,9 @@ package login
 import (
 	"io/ioutil"
 
+	"github.com/afdecastro/loginsrv/model"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/pkg/errors"
-	"github.com/tarent/loginsrv/model"
 	yaml "gopkg.in/yaml.v2"
 )
 

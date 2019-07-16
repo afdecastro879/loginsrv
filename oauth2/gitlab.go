@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tarent/loginsrv/model"
+	"github.com/afdecastro/loginsrv/model"
 )
 
 var gitlabAPI = "https://gitlab.com/api/v4"

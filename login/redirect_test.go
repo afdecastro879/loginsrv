@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/afdecastro/loginsrv/oauth2"
 	. "github.com/stretchr/testify/assert"
-	"github.com/tarent/loginsrv/oauth2"
 	"io/ioutil"
 )
 

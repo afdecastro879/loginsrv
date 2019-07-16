@@ -7,9 +7,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tarent/loginsrv/model"
+	"github.com/afdecastro/loginsrv/model"
 )
-
 
 var googleUserinfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo"
 

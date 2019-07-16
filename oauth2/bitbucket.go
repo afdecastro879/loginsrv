@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tarent/loginsrv/model"
+	"github.com/afdecastro/loginsrv/model"
 )
 
 var bitbucketAPI = "https://api.bitbucket.org/2.0"

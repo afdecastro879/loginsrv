@@ -2,8 +2,8 @@ package htpasswd
 
 import (
 	"errors"
-	"github.com/tarent/loginsrv/login"
-	"github.com/tarent/loginsrv/model"
+	"github.com/afdecastro/loginsrv/login"
+	"github.com/afdecastro/loginsrv/model"
 	"strings"
 )
 

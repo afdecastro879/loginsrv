@@ -1,4 +1,4 @@
-module github.com/tarent/loginsrv
+module github.com/afdecastro/loginsrv
 
 go 1.12
 

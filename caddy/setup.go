@@ -8,16 +8,16 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/caddyserver/caddy"
-	"github.com/caddyserver/caddy/caddyhttp/httpserver"
-	"github.com/tarent/loginsrv/logging"
-	"github.com/tarent/loginsrv/login"
+	"github.com/afdecastro/loginsrv/logging"
+	"github.com/afdecastro/loginsrv/login"
+	"github.com/mholt/caddy"
+	"github.com/mholt/caddy/caddyhttp/httpserver"
 
 	// Import all backends, packaged with the caddy plugin
-	_ "github.com/tarent/loginsrv/htpasswd"
-	_ "github.com/tarent/loginsrv/httpupstream"
-	_ "github.com/tarent/loginsrv/oauth2"
-	_ "github.com/tarent/loginsrv/osiam"
+	_ "github.com/afdecastro/loginsrv/htpasswd"
+	_ "github.com/afdecastro/loginsrv/httpupstream"
+	_ "github.com/afdecastro/loginsrv/oauth2"
+	_ "github.com/afdecastro/loginsrv/osiam"
 )
 
 func init() {

@@ -9,8 +9,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tarent/loginsrv/logging"
-	"github.com/tarent/loginsrv/oauth2"
+	"github.com/afdecastro/loginsrv/logging"
+	"github.com/afdecastro/loginsrv/oauth2"
 )
 
 var jwtDefaultSecret string
