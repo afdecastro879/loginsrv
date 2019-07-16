@@ -1,12 +1,12 @@
 # loginsrv Caddy middleware
 
-Login plugin for Caddy, based on [tarent/loginsrv](https://github.com/tarent/loginsrv).
+Login plugin for Caddy, based on [afdecastro/loginsrv](https://github.com/afdecastro/loginsrv).
 The login is checked against a backend and then returned as a JWT token.
 This middleware is designed to play together with the [caddy-jwt](https://github.com/BTBurke/caddy-jwt) plugin.
 
-For a full documentation of loginsrv configuration and usage, visit the [loginsrv README.md](https://github.com/tarent/loginsrv).
+For a full documentation of loginsrv configuration and usage, visit the [loginsrv README.md](https://github.com/afdecastro/loginsrv).
 
-A small demo can be found in the [./demo](https://github.com/tarent/loginsrv/tree/master/caddy/demo) directory.
+A small demo can be found in the [./demo](https://github.com/afdecastro/loginsrv/tree/master/caddy/demo) directory.
 
 ## Configuration of `JWT_SECRET`
 The jwt secret is taken from the environment variable `JWT_SECRET` if this variable is set.

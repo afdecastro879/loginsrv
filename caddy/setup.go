@@ -10,8 +10,8 @@ import (
 
 	"github.com/afdecastro/loginsrv/logging"
 	"github.com/afdecastro/loginsrv/login"
-	"github.com/mholt/caddy"
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/caddyserver/caddy"
+	"github.com/caddyserver/caddy/caddyhttp/httpserver"
 
 	// Import all backends, packaged with the caddy plugin
 	_ "github.com/afdecastro/loginsrv/htpasswd"

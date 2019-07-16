@@ -3,7 +3,7 @@ package caddy
 import (
 	"context"
 	"github.com/afdecastro/loginsrv/login"
-	"github.com/mholt/caddy/caddyhttp/httpserver"
+	"github.com/caddyserver/caddy/caddyhttp/httpserver"
 	"net/http"
 	"strings"
 )
