@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 	. "github.com/stretchr/testify/assert"
 )
 

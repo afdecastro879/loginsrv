@@ -3,7 +3,7 @@ package oauth2
 import (
 	"crypto/tls"
 	"errors"
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 	. "github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"

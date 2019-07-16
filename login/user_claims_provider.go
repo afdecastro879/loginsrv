@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/pkg/errors"
 )

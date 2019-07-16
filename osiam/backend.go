@@ -3,7 +3,7 @@ package osiam
 import (
 	"errors"
 	"fmt"
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 	"net/url"
 )
 

@@ -1,7 +1,7 @@
 package osiam
 
 import (
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 	. "github.com/stretchr/testify/assert"
 	"net/http"
 	"net/http/httptest"

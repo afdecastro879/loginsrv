@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 )
 
 var facebookAPI = "https://graph.facebook.com/v2.12"

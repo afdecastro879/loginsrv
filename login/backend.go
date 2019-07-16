@@ -1,7 +1,7 @@
 package login
 
 import (
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 )
 
 // Backend is an loginsrv authentication extension

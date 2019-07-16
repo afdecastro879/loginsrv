@@ -1,7 +1,7 @@
 package oauth2
 
 import (
-	"github.com/afdecastro/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/model"
 )
 
 // Provider is the description of an oauth provider adapter

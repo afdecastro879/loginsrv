@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/afdecastro/loginsrv/model"
-	"github.com/afdecastro/loginsrv/oauth2"
+	"github.com/afdecastro879/loginsrv/model"
+	"github.com/afdecastro879/loginsrv/oauth2"
 	"github.com/dgrijalva/jwt-go"
 	. "github.com/stretchr/testify/assert"
 )

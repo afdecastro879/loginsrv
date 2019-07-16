@@ -1,11 +1,11 @@
 package main
 
 import (
-	_ "github.com/afdecastro/loginsrv/htpasswd"
-	_ "github.com/afdecastro/loginsrv/httpupstream"
-	_ "github.com/afdecastro/loginsrv/osiam"
+	_ "github.com/afdecastro879/loginsrv/htpasswd"
+	_ "github.com/afdecastro879/loginsrv/httpupstream"
+	_ "github.com/afdecastro879/loginsrv/osiam"
 
-	"github.com/afdecastro/loginsrv/login"
+	"github.com/afdecastro879/loginsrv/login"
 
 	"context"
 	"fmt"
@@ -14,7 +14,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/afdecastro/loginsrv/logging"
+	"github.com/afdecastro879/loginsrv/logging"
 )
 
 const applicationName = "loginsrv"

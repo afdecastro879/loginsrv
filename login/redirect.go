@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/afdecastro/loginsrv/logging"
+	"github.com/afdecastro879/loginsrv/logging"
 )
 
 func (h *Handler) setRedirectCookie(w http.ResponseWriter, r *http.Request) {

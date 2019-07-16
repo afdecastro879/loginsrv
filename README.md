@@ -2,11 +2,11 @@
 
 loginsrv is a standalone minimalistic login server providing a [JWT](https://jwt.io/) login for multiple login backends.
 
-[![Docker](https://img.shields.io/docker/pulls/afdecastro/loginsrv.svg)](https://hub.docker.com/r/afdecastro/loginsrv/)
-[![Build Status](https://api.travis-ci.org/afdecastro/loginsrv.svg?branch=master)](https://travis-ci.org/afdecastro/loginsrv)
-[![Go Report Card](https://goreportcard.com/badge/github.com/afdecastro/loginsrv)](https://goreportcard.com/report/github.com/afdecastro/loginsrv)
-[![Coverage Status](https://coveralls.io/repos/github/afdecastro/loginsrv/badge.svg?branch=master)](https://coveralls.io/github/afdecastro/loginsrv?branch=master)
-[![Join the chat at https://gitter.im/afdecastro/loginsrv](https://badges.gitter.im/afdecastro/loginsrv.svg)](https://gitter.im/afdecastro/loginsrv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Docker](https://img.shields.io/docker/pulls/afdecastro879/loginsrv.svg)](https://hub.docker.com/r/afdecastro879/loginsrv/)
+[![Build Status](https://api.travis-ci.org/afdecastro879/loginsrv.svg?branch=master)](https://travis-ci.org/afdecastro879/loginsrv)
+[![Go Report Card](https://goreportcard.com/badge/github.com/afdecastro879/loginsrv)](https://goreportcard.com/report/github.com/afdecastro879/loginsrv)
+[![Coverage Status](https://coveralls.io/repos/github/afdecastro879/loginsrv/badge.svg?branch=master)](https://coveralls.io/github/afdecastro879/loginsrv?branch=master)
+[![Join the chat at https://gitter.im/afdecastro879/loginsrv](https://badges.gitter.im/afdecastro879/loginsrv.svg)](https://gitter.im/afdecastro879/loginsrv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 __** Attention: Update to v1.3.0 for Google Login Update !!!! **__
@@ -47,9 +47,9 @@ The following providers (login backends) are supported.
 
 ## Questions
 
-For questions and support please use the [Gitter chat room](https://gitter.im/afdecastro/loginsrv).
+For questions and support please use the [Gitter chat room](https://gitter.im/afdecastro879/loginsrv).
 
-[![Join the chat at https://gitter.im/afdecastro/loginsrv](https://badges.gitter.im/afdecastro/loginsrv.svg)](https://gitter.im/afdecastro/loginsrv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/afdecastro879/loginsrv](https://badges.gitter.im/afdecastro879/loginsrv.svg)](https://gitter.im/afdecastro879/loginsrv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Configuration and Startup
 ### Config Options
@@ -102,7 +102,7 @@ So e.g. `jwt-secret` can be set by environment variable `LOGINSRV_JWT_SECRET`.
 The simplest way to use loginsrv is by the provided docker container.
 E.g. configured with the simple provider:
 ```
-$ docker run -d -p 8080:8080 afdecastro/loginsrv -cookie-secure=false -jwt-secret my_secret -simple bob=secret
+$ docker run -d -p 8080:8080 afdecastro879/loginsrv -cookie-secure=false -jwt-secret my_secret -simple bob=secret
 
 $ curl --data "username=bob&password=secret" 127.0.0.1:8080/login
 eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJib2IifQ.uWoJkSXTLA_RvfLKe12pb4CyxQNxe5_Ovw-N5wfQwkzXz2enbhA9JZf8MmTp9n-TTDcWdY3Fd1SA72_M20G9lQ
@@ -110,7 +110,7 @@ eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJib2IifQ.uWoJkSXTLA_RvfLKe12pb4Cy
 
 The same configuration could be written with environment variables this way:
 ```
-$ docker run -d -p 8080:8080 -E COOKIE_SECURE=false -e LOGINSRV_JWT_SECRET=my_secret -e LOGINSRV_BACKEND=provider=simple,bob=secret afdecastro/loginsrv
+$ docker run -d -p 8080:8080 -E COOKIE_SECURE=false -e LOGINSRV_JWT_SECRET=my_secret -e LOGINSRV_BACKEND=provider=simple,bob=secret afdecastro879/loginsrv
 ```
 
 ## API
@@ -330,13 +330,13 @@ if loginsrv is routed through a reverse proxy, if the headers `X-Forwarded-Host`
 
 ### GitHub Startup Example
 ```
-$ docker run -p 80:80 afdecastro/loginsrv -github client_id=xxx,client_secret=yyy
+$ docker run -p 80:80 afdecastro879/loginsrv -github client_id=xxx,client_secret=yyy
 ```
 
 ## Templating
 
 A custom template can be supplied by the parameter `template`. 
-You can find the original template in [login/login_form.go](https://github.com/afdecastro/loginsrv/blob/master/login/login_form.go).
+You can find the original template in [login/login_form.go](https://github.com/afdecastro879/loginsrv/blob/master/login/login_form.go).
 
 The templating uses the Golang template package. A short intro can be found [here](https://astaxie.gitbooks.io/build-web-application-with-golang/en/07.4.html).
 

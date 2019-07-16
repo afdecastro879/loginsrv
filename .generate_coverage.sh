@@ -1,7 +1,7 @@
 #!/bin/bash -e
 # Requires installation of: `github.com/wadey/gocovmerge`
 
-cd $GOPATH/src/github.com/afdecastro/loginsrv
+cd $GOPATH/src/github.com/afdecastro879/loginsrv
 
 rm -rf ./cov
 mkdir cov
