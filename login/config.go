@@ -193,6 +193,7 @@ func ReadConfig() *Config {
 }
 
 func readConfig(f *flag.FlagSet, args []string) (*Config, error) {
+	logging.Logger.Info("reading config for login")
 	config := DefaultConfig()
 	config.ConfigureFlagSet(f)
 
