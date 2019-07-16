@@ -47,6 +47,7 @@ func DefaultConfig() *Config {
 		UserEndpoint:           "",
 		UserEndpointToken:      "",
 		UserEndpointTimeout:    5 * time.Second,
+		CallbackURL:            "",
 	}
 }
 
@@ -82,6 +83,7 @@ type Config struct {
 	UserEndpoint           string
 	UserEndpointToken      string
 	UserEndpointTimeout    time.Duration
+	CallbackURL            string
 }
 
 // Options is the configuration structure for oauth and backend provider
@@ -139,6 +141,7 @@ func (c *Config) ConfigureFlagSet(f *flag.FlagSet) {
 	f.StringVar(&c.UserEndpoint, "user-endpoint", c.UserEndpoint, "URL of an endpoint providing user specific data for the tokens")
 	f.StringVar(&c.UserEndpointToken, "user-endpoint-token", c.UserEndpointToken, "Authentication token used when communicating with the user endpoint")
 	f.DurationVar(&c.UserEndpointTimeout, "user-endpoint-timeout", c.UserEndpointTimeout, "Timeout used when communicating with the user endpoint")
+	f.StringVar(&c.CallbackURL, "callback-url", c.CallbackURL, "Url that gets post after user login")
 
 	// the -backends is deprecated, but we support it for backwards compatibility
 	deprecatedBackends := setFunc(func(optsKvList string) error {

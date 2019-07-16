@@ -1,7 +1,10 @@
 package oauth2
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
+	"github.com/davecgh/go-spew/spew"
 	"github.com/tarent/loginsrv/model"
 	"net/http"
 	"net/url"
@@ -11,9 +14,34 @@ import (
 // Manager has the responsibility to handle the user user requests in an oauth flow.
 // It has to pick the right configuration and start the oauth redirecting.
 type Manager struct {
+	CallbackURL  string
 	configs      map[string]Config
 	startFlow    func(cfg Config, w http.ResponseWriter)
 	authenticate func(cfg Config, r *http.Request) (TokenInfo, error)
+}
+
+var AuthCallback = func(userInfo model.UserInfo, token TokenInfo, callbackURL string) {
+	spew.Dump(callbackURL)
+	if callbackURL != "" {
+		payload := struct {
+			Username      string `json:"username"`
+			Image         string `json:"image"`
+			Name          string `json:"name"`
+			OauthProvider string `json:"oauth_provider"`
+			AccessToken   string `json:"access_token"`
+		}{
+			userInfo.Sub,
+			userInfo.Picture,
+			userInfo.Name,
+			userInfo.Origin,
+			token.AccessToken,
+		}
+
+		jsonValue, _ := json.Marshal(payload)
+
+		resp, _ := http.Post(callbackURL, "application/json", bytes.NewBuffer(jsonValue))
+		defer resp.Body.Close()
+	}
 }
 
 // NewManager creates a new Manager
@@ -58,6 +86,7 @@ func (manager *Manager) Handle(w http.ResponseWriter, r *http.Request) (
 		if err != nil {
 			return false, false, model.UserInfo{}, err
 		}
+		AuthCallback(userInfo, tokenInfo, manager.CallbackURL)
 		return false, true, userInfo, err
 	}
 

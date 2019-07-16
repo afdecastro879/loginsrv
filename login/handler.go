@@ -54,6 +54,7 @@ func NewHandler(config *Config) (*Handler, error) {
 	}
 
 	oauth := oauth2.NewManager()
+	oauth.CallbackURL = config.CallbackURL
 	for providerName, opts := range config.Oauth {
 		err := oauth.AddConfig(providerName, opts)
 		if err != nil {
